@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Bản Thân</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-white to-blue-50 min-h-screen">
+    <!-- Navigation -->
+     <!-- Loader -->
+<div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-500">
+    <div class="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
+</div>
+
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold gradient-text">Portfolio</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition">Trang chủ</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition">Giới thiệu</a>
+                    <a href="#skills" class="text-gray-700 hover:text-purple-600 transition">Kỹ năng</a>
+                    <a href="#projects" class="text-gray-700 hover:text-purple-600 transition">Dự án</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">Liên hệ</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden fixed inset-0 bg-white z-40 pt-20">
+        <div class="flex flex-col items-center space-y-6 text-xl">
+            <a href="#home" class="text-gray-700 hover:text-purple-600 mobile-link">Trang chủ</a>
+            <a href="#about" class="text-gray-700 hover:text-purple-600 mobile-link">Giới thiệu</a>
+            <a href="#skills" class="text-gray-700 hover:text-purple-600 mobile-link">Kỹ năng</a>
+            <a href="#projects" class="text-gray-700 hover:text-purple-600 mobile-link">Dự án</a>
+            <a href="#contact" class="text-gray-700 hover:text-purple-600 mobile-link">Liên hệ</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-8 fade-in-up">
+                <div class="w-32 h-32 mx-auto bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center text-white text-5xl font-bold">
+                    TN
+                </div>
+            </div>
+            <h2 class="text-5xl md:text-6xl font-bold mb-4 fade-in-up delay-1">
+                Xin chào, tôi là <span class="gradient-text">Tên Của Bạn</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 fade-in-up delay-2">
+                Web Developer | UI/UX Enthusiast | Creative Thinker
+            </p>
+            <div class="flex justify-center space-x-4 fade-in-up delay-3">
+                <a href="#contact" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full hover:shadow-lg transition">
+                    Liên hệ
+                </a>
+                <a href="#projects" class="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-full hover:bg-purple-600 hover:text-white transition">
+                    Xem dự án
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white/50">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12 gradient-text">Giới Thiệu</h3>
+            <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                    Tôi là một Web Developer đam mê với việc tạo ra những trải nghiệm web tuyệt vời. 
+                    Với kinh nghiệm trong phát triển front-end và back-end, tôi luôn tìm kiếm những thách thức mới 
+                    để cải thiện kỹ năng của mình.
+                </p>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Tôi tin rằng công nghệ có thể thay đổi thế giới và tôi muốn là một phần của sự thay đổi đó. 
+                    Hãy cùng nhau tạo ra điều gì đó tuyệt vời!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12 gradient-text">Kỹ Năng</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h4 class="text-xl font-bold mb-2">Front-end</h4>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• HTML5 & CSS3</li>
+                        <li>• JavaScript (ES6+)</li>
+                        <li>• React.js</li>
+                        <li>• Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">⚙️</div>
+                    <h4 class="text-xl font-bold mb-2">Back-end</h4>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Node.js</li>
+                        <li>• Python</li>
+                        <li>• MongoDB</li>
+                        <li>• RESTful API</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h4 class="text-xl font-bold mb-2">Tools & Others</h4>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Git & GitHub</li>
+                        <li>• Figma</li>
+                        <li>• VS Code</li>
+                        <li>• Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-white/50">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12 gradient-text">Dự Án</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-blue-500"></div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Dự Án 1</h4>
+                        <p class="text-gray-600 mb-4">Mô tả ngắn gọn về dự án của bạn. Công nghệ sử dụng và những gì bạn đã học được.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-purple-600 hover:underline">Demo</a>
+                            <a href="#" class="text-purple-600 hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-pink-400 to-orange-500"></div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Dự Án 2</h4>
+                        <p class="text-gray-600 mb-4">Mô tả ngắn gọn về dự án của bạn. Công nghệ sử dụng và những gì bạn đã học được.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-purple-600 hover:underline">Demo</a>
+                            <a href="#" class="text-purple-600 hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-2xl mx-auto text-center">
+            <h3 class="text-4xl font-bold mb-6 gradient-text">Liên Hệ</h3>
+            <p class="text-gray-600 text-lg mb-8">
+                Bạn có dự án thú vị? Hãy liên hệ với tôi!
+            </p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center hover:bg-purple-700 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="#" class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" class="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+                </a>
+            </div>
+            <a href="mailto:your.email@example.com" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full hover:shadow-lg transition">
+                Gửi Email
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>&copy; 2024 Tên Của Bạn. All rights reserved.</p>
+        </div>
+    </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>
