@@ -30,24 +30,7 @@
             });
         });
 
-        // Skill bar animation on scroll
-        const skillBars = document.querySelectorAll('.skill-bar');
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.width = entry.target.style.width;
-                }
-            });
-        }, observerOptions);
-
-        skillBars.forEach(bar => observer.observe(bar));
-
-        // Add active state to nav links
+        // Active nav link on scroll
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section[id]');
             const scrollY = window.pageYOffset;
@@ -56,11 +39,33 @@
                 const sectionHeight = section.offsetHeight;
                 const sectionTop = section.offsetTop - 100;
                 const sectionId = section.getAttribute('id');
-                const navLink = document.querySelector(`a[href="#${sectionId}"]`);
+                const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLink.classList.add('text-purple-400');
-                } else {
-                    navLink.classList.remove('text-purple-400');
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('text-purple-400');
+                    });
+                    if (navLink) {
+                        navLink.classList.add('text-purple-400');
+                    }
                 }
             });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover, .timeline-item, .certificate-card').forEach(el => {
+            observer.observe(el);
         });

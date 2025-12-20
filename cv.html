@@ -3,156 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Junior Developer</title>
+    <title>Portfolio - Creative Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
-        
-        * {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-        }
-        
-        .nav-link {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-        
-        .skill-badge:hover {
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        
-        #mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        #mobile-menu.active {
-            transform: translateX(0);
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 2rem;
-            border-left: 2px solid #667eea;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #667eea;
-        }
-        
-        .certificate-card {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .certificate-card::after {
-            content: '✓';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 30px;
-            height: 30px;
-            background: #10b981;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .certificate-card:hover::after {
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-950 text-white overflow-x-hidden">
     
+    <!-- Animated Background Particles -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="particle bg-purple-500 w-3 h-3" style="top: 10%; left: 10%;"></div>
+        <div class="particle bg-blue-500 w-4 h-4" style="top: 20%; right: 15%; animation-delay: 2s;"></div>
+        <div class="particle bg-pink-500 w-2 h-2" style="bottom: 15%; left: 20%; animation-delay: 4s;"></div>
+        <div class="particle bg-purple-600 w-5 h-5" style="bottom: 25%; right: 10%; animation-delay: 6s;"></div>
+        <div class="particle bg-indigo-500 w-3 h-3" style="top: 50%; left: 5%; animation-delay: 8s;"></div>
+        <div class="particle bg-fuchsia-500 w-4 h-4" style="top: 70%; right: 20%; animation-delay: 10s;"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="fixed w-full top-0 z-50 glass">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-xl sm:text-2xl font-bold gradient-text">My Portfolio</div>
+                <div class="text-xl sm:text-2xl font-bold gradient-text">DEV.PORTFOLIO</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link hover:text-purple-400 transition">Trang chủ</a>
-                    <a href="#about" class="nav-link hover:text-purple-400 transition">Giới thiệu</a>
-                    <a href="#education" class="nav-link hover:text-purple-400 transition">Học vấn</a>
-                    <a href="#skills" class="nav-link hover:text-purple-400 transition">Kỹ năng</a>
-                    <a href="#projects" class="nav-link hover:text-purple-400 transition">Dự án</a>
-                    <a href="#contact" class="nav-link hover:text-purple-400 transition">Liên hệ</a>
+                    <a href="#home" class="nav-link hover:text-purple-400 transition">Home</a>
+                    <a href="#about" class="nav-link hover:text-purple-400 transition">About</a>
+                    <a href="#skills" class="nav-link hover:text-purple-400 transition">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-purple-400 transition">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-purple-400 transition">Contact</a>
                 </div>
-                <button id="menu-toggle" class="md:hidden text-white z-50">
+                <button id="menu-toggle" class="md:hidden text-white z-50 relative">
                     <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -167,205 +46,99 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 glass z-40 md:hidden">
         <div class="flex flex-col items-start space-y-8 pt-24 px-8 text-lg">
-            <a href="#home" class="mobile-link hover:text-purple-400 transition">Trang chủ</a>
-            <a href="#about" class="mobile-link hover:text-purple-400 transition">Giới thiệu</a>
-            <a href="#education" class="mobile-link hover:text-purple-400 transition">Học vấn</a>
-            <a href="#skills" class="mobile-link hover:text-purple-400 transition">Kỹ năng</a>
-            <a href="#projects" class="mobile-link hover:text-purple-400 transition">Dự án</a>
-            <a href="#contact" class="mobile-link hover:text-purple-400 transition">Liên hệ</a>
+            <a href="#home" class="mobile-link hover:text-purple-400 transition">Home</a>
+            <a href="#about" class="mobile-link hover:text-purple-400 transition">About</a>
+            <a href="#skills" class="mobile-link hover:text-purple-400 transition">Skills</a>
+            <a href="#projects" class="mobile-link hover:text-purple-400 transition">Projects</a>
+            <a href="#contact" class="mobile-link hover:text-purple-400 transition">Contact</a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 hero-gradient opacity-10"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 fade-in">
             <div class="floating mb-8">
-                <div class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full bg-gradient-to-br from-purple-600 to-pink-600 p-1">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full hero-gradient p-1 glow-effect">
                     <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center">
-                        <span class="text-4xl sm:text-6xl">👨‍💻</span>
+                        <span class="text-4xl sm:text-6xl font-bold gradient-text">ĐD</span>
                     </div>
                 </div>
             </div>
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black mb-4">
-                Xin chào, mình là <span class="gradient-text">Nguyễn Văn A</span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 text-shadow">
+                Hi, I'm <span class="gradient-text">Luu Duc Dung</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 mb-4">Sinh viên năm cuối ngành Công nghệ Thông tin</p>
-            <p class="text-base sm:text-lg text-gray-500 mb-8 max-w-2xl mx-auto px-4">
-                Đam mê lập trình web và luôn háo hức học hỏi công nghệ mới. Tìm kiếm cơ hội thực tập/intern để phát triển kỹ năng và đóng góp vào dự án thực tế.
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-400 mb-4 font-light">Creative Developer & UI/UX Designer</p>
+            <p class="text-base sm:text-lg text-gray-500 mb-12 max-w-2xl mx-auto px-4">
+                Crafting beautiful digital experiences with code and creativity. Specialized in modern web technologies and innovative design solutions.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8 px-4">
-                <a href="#projects" class="px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition">
-                    Xem dự án của mình
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16 px-4">
+                <a href="#projects" class="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition transform text-sm sm:text-base">
+                    View My Work
                 </a>
-                <a href="#contact" class="px-6 sm:px-8 py-3 border-2 border-purple-600 rounded-full font-semibold hover:bg-purple-600 transition">
-                    Liên hệ với mình
+                <a href="#contact" class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-purple-600 rounded-full font-semibold hover:bg-purple-600 transition text-sm sm:text-base">
+                    Get In Touch
                 </a>
             </div>
-            <div class="flex justify-center gap-4 text-sm text-gray-400">
-                <div class="flex items-center gap-2">
-                    <span>📧</span>
-                    <span>nguyenvana@email.com</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span>📱</span>
-                    <span>0123 456 789</span>
-                </div>
+            <div class="scroll-indicator text-gray-500">
+                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+    <section id="about" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl sm:text-5xl font-black mb-12 text-center">
-                Giới Thiệu <span class="gradient-text">Bản Thân</span>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black mb-12 sm:mb-16 text-center">
+                About <span class="gradient-text">Me</span>
             </h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
                 <div class="space-y-6">
                     <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
-                        Mình là sinh viên năm 4 ngành CNTT tại Đại học ABC. Trong quá trình học, mình đã tự học và thực hành nhiều công nghệ web hiện đại thông qua các dự án cá nhân và học tập.
+                        I'm a passionate developer with 5+ years of experience in creating stunning web applications. I specialize in turning complex problems into simple, beautiful, and intuitive designs.
                     </p>
                     <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
-                        Mặc dù chưa có nhiều kinh nghiệm thực tế, nhưng mình có nền tảng vững về lập trình, khả năng học hỏi nhanh và tinh thần làm việc nhóm tốt. Mình sẵn sàng làm việc chăm chỉ để đóng góp và phát triển cùng công ty.
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="bg-slate-800 px-4 py-2 rounded-lg">
-                            <div class="text-2xl font-bold gradient-text">3.5/4.0</div>
-                            <div class="text-sm text-gray-400">GPA</div>
+                    <div class="grid grid-cols-3 gap-4 pt-4">
+                        <div class="text-center">
+                            <div class="text-3xl sm:text-4xl font-bold gradient-text">50+</div>
+                            <div class="text-sm sm:text-base text-gray-500">Projects</div>
                         </div>
-                        <div class="bg-slate-800 px-4 py-2 rounded-lg">
-                            <div class="text-2xl font-bold gradient-text">10+</div>
-                            <div class="text-sm text-gray-400">Dự án</div>
+                        <div class="text-center">
+                            <div class="text-3xl sm:text-4xl font-bold gradient-text">5+</div>
+                            <div class="text-sm sm:text-base text-gray-500">Years Exp</div>
                         </div>
-                        <div class="bg-slate-800 px-4 py-2 rounded-lg">
-                            <div class="text-2xl font-bold gradient-text">5+</div>
-                            <div class="text-sm text-gray-400">Chứng chỉ</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-slate-800 rounded-xl p-6 card-hover">
-                        <div class="flex items-start gap-4">
-                            <div class="text-3xl">🎯</div>
-                            <div>
-                                <h3 class="text-lg font-bold mb-2">Mục tiêu nghề nghiệp</h3>
-                                <p class="text-gray-400 text-sm">Trở thành Full-stack Developer chuyên nghiệp, đóng góp vào các dự án có ý nghĩa và không ngừng học hỏi công nghệ mới.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-800 rounded-xl p-6 card-hover">
-                        <div class="flex items-start gap-4">
-                            <div class="text-3xl">💪</div>
-                            <div>
-                                <h3 class="text-lg font-bold mb-2">Điểm mạnh</h3>
-                                <p class="text-gray-400 text-sm">Học hỏi nhanh, chủ động tìm tòi, có khả năng làm việc nhóm tốt, kiên trì và có trách nhiệm với công việc.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-800 rounded-xl p-6 card-hover">
-                        <div class="flex items-start gap-4">
-                            <div class="text-3xl">🌱</div>
-                            <div>
-                                <h3 class="text-lg font-bold mb-2">Sẵn sàng học hỏi</h3>
-                                <p class="text-gray-400 text-sm">Luôn cởi mở với feedback, sẵn sàng học từ senior developers và áp dụng vào công việc thực tế.</p>
-                            </div>
+                        <div class="text-center">
+                            <div class="text-3xl sm:text-4xl font-bold gradient-text">30+</div>
+                            <div class="text-sm sm:text-base text-gray-500">Clients</div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl sm:text-5xl font-black mb-12 text-center">
-                Học Vấn & <span class="gradient-text">Chứng Chỉ</span>
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <!-- Education -->
-                <div>
-                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <span>🎓</span>
-                        <span>Học vấn</span>
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="timeline-item">
-                            <div class="bg-slate-800 rounded-xl p-6">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold text-lg">Đại học ABC</h4>
-                                    <span class="text-sm text-purple-400">2021 - 2025</span>
-                                </div>
-                                <p class="text-gray-400 mb-2">Cử nhân Công nghệ Thông tin</p>
-                                <p class="text-sm text-gray-500">GPA: 3.5/4.0</p>
-                                <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded">Giải Nhì Hackathon 2024</span>
-                                    <span class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded">Dean's List 3 học kỳ</span>
-                                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl transform rotate-6"></div>
+                    <div class="relative bg-slate-900 rounded-3xl p-6 sm:p-8 space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-2xl flex-shrink-0">🚀</div>
+                            <div>
+                                <div class="font-semibold text-sm sm:text-base">Fast Performance</div>
+                                <div class="text-xs sm:text-sm text-gray-500">Optimized for speed</div>
                             </div>
                         </div>
-                        
-                        <div class="timeline-item">
-                            <div class="bg-slate-800 rounded-xl p-6">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold text-lg">Các khóa học online</h4>
-                                    <span class="text-sm text-purple-400">2023 - Nay</span>
-                                </div>
-                                <ul class="text-sm text-gray-400 space-y-1">
-                                    <li>• The Complete Web Developer Bootcamp (Udemy)</li>
-                                    <li>• React - The Complete Guide (Udemy)</li>
-                                    <li>• JavaScript Algorithms and Data Structures (freeCodeCamp)</li>
-                                </ul>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-2xl flex-shrink-0">💡</div>
+                            <div>
+                                <div class="font-semibold text-sm sm:text-base">Creative Solutions</div>
+                                <div class="text-xs sm:text-sm text-gray-500">Innovative approaches</div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Certificates -->
-                <div>
-                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <span>🏆</span>
-                        <span>Chứng chỉ</span>
-                    </h3>
-                    <div class="grid gap-4">
-                        <div class="certificate-card bg-slate-800 rounded-xl p-4 card-hover">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">📜</div>
-                                <div class="flex-1">
-                                    <h4 class="font-bold text-sm">Responsive Web Design</h4>
-                                    <p class="text-xs text-gray-400">freeCodeCamp • 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="certificate-card bg-slate-800 rounded-xl p-4 card-hover">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">📜</div>
-                                <div class="flex-1">
-                                    <h4 class="font-bold text-sm">JavaScript Algorithms</h4>
-                                    <p class="text-xs text-gray-400">freeCodeCamp • 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="certificate-card bg-slate-800 rounded-xl p-4 card-hover">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">📜</div>
-                                <div class="flex-1">
-                                    <h4 class="font-bold text-sm">Git & GitHub Essential</h4>
-                                    <p class="text-xs text-gray-400">LinkedIn Learning • 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="certificate-card bg-slate-800 rounded-xl p-4 card-hover">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">📜</div>
-                                <div class="flex-1">
-                                    <h4 class="font-bold text-sm">React Developer Certificate</h4>
-                                    <p class="text-xs text-gray-400">Udemy • 2024</p>
-                                </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center text-2xl flex-shrink-0">🎨</div>
+                            <div>
+                                <div class="font-semibold text-sm sm:text-base">Beautiful Design</div>
+                                <div class="text-xs sm:text-sm text-gray-500">Pixel-perfect UI</div>
                             </div>
                         </div>
                     </div>
@@ -375,140 +148,112 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+    <section id="skills" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-950 to-slate-900">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl sm:text-5xl font-black mb-12 text-center">
-                Kỹ Năng <span class="gradient-text">Của Mình</span>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black mb-12 sm:mb-16 text-center">
+                My <span class="gradient-text">Skills</span>
             </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div>
-                    <h3 class="text-xl font-bold mb-6">💻 Technical Skills</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-slate-700 hover:border-purple-500 transition">
+                    <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">⚡</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Frontend</h3>
                     <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span>HTML & CSS</span>
-                                <span class="text-purple-400">Thành thạo</span>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>React/Next.js</span>
+                                <span class="text-purple-400">95%</span>
                             </div>
                             <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600" style="width: 85%"></div>
+                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600 skill-bar" style="width: 95%"></div>
                             </div>
                         </div>
-                        
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span>JavaScript</span>
-                                <span class="text-purple-400">Tốt</span>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>TypeScript</span>
+                                <span class="text-purple-400">90%</span>
                             </div>
                             <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600" style="width: 75%"></div>
+                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600 skill-bar" style="width: 90%"></div>
                             </div>
                         </div>
-                        
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span>React.js</span>
-                                <span class="text-purple-400">Trung bình</span>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>Tailwind CSS</span>
+                                <span class="text-purple-400">98%</span>
                             </div>
                             <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600" style="width: 65%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Node.js & Express</span>
-                                <span class="text-purple-400">Cơ bản</span>
-                            </div>
-                            <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600" style="width: 55%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Git & GitHub</span>
-                                <span class="text-purple-400">Tốt</span>
-                            </div>
-                            <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600" style="width: 70%"></div>
+                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600 skill-bar" style="width: 98%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <h3 class="text-xl font-bold mb-6">🎯 Soft Skills</h3>
+                <div class="bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-slate-700 hover:border-blue-500 transition">
+                    <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">🔧</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Backend</h3>
                     <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Làm việc nhóm</span>
-                                <span class="text-blue-400">Tốt</span>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>Node.js</span>
+                                <span class="text-blue-400">88%</span>
                             </div>
                             <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-600" style="width: 80%"></div>
+                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-600 skill-bar" style="width: 88%"></div>
                             </div>
                         </div>
-                        
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Giải quyết vấn đề</span>
-                                <span class="text-blue-400">Tốt</span>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>Python/Django</span>
+                                <span class="text-blue-400">85%</span>
                             </div>
                             <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-600" style="width: 75%"></div>
+                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-600 skill-bar" style="width: 85%"></div>
                             </div>
                         </div>
-                        
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Tự học & nghiên cứu</span>
-                                <span class="text-blue-400">Rất tốt</span>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>PostgreSQL</span>
+                                <span class="text-blue-400">82%</span>
                             </div>
                             <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-600" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Quản lý thời gian</span>
-                                <span class="text-blue-400">Tốt</span>
-                            </div>
-                            <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-600" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Tiếng Anh</span>
-                                <span class="text-blue-400">Trung bình khá</span>
-                            </div>
-                            <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-600" style="width: 65%"></div>
+                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-600 skill-bar" style="width: 82%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Technology Badges -->
-            <div>
-                <h3 class="text-xl font-bold mb-6 text-center">🛠️ Công nghệ đã sử dụng</h3>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <span class="skill-badge px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium">HTML5</span>
-                    <span class="skill-badge px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium">CSS3</span>
-                    <span class="skill-badge px-4 py-2 bg-yellow-600/20 text-yellow-400 rounded-full text-sm font-medium">JavaScript</span>
-                    <span class="skill-badge px-4 py-2 bg-cyan-600/20 text-cyan-400 rounded-full text-sm font-medium">React</span>
-                    <span class="skill-badge px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium">Tailwind CSS</span>
-                    <span class="skill-badge px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium">Node.js</span>
-                    <span class="skill-badge px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium">MongoDB</span>
-                    <span class="skill-badge px-4 py-2 bg-red-600/20 text-red-400 rounded-full text-sm font-medium">Git</span>
-                    <span class="skill-badge px-4 py-2 bg-slate-600/20 text-slate-400 rounded-full text-sm font-medium">GitHub</span>
-                    <span class="skill-badge px-4 py-2 bg-indigo-600/20 text-indigo-400 rounded-full text-sm font-medium">Figma</span>
-                    <span class="skill-badge px-4 py-2 bg-pink-600/20 text-pink-400 rounded-full text-sm font-medium">Responsive Design</span>
-                    <span class="skill-badge px-4 py-2 bg-violet-600/20 text-violet-400 rounded-full text-sm font-medium">RESTful API</span>
+                <div class="bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-slate-700 hover:border-pink-500 transition sm:col-span-2 lg:col-span-1">
+                    <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">🎨</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Design</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>Figma</span>
+                                <span class="text-pink-400">92%</span>
+                            </div>
+                            <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-pink-600 to-rose-600 skill-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>UI/UX Design</span>
+                                <span class="text-pink-400">90%</span>
+                            </div>
+                            <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-pink-600 to-rose-600 skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2 text-sm sm:text-base">
+                                <span>Prototyping</span>
+                                <span class="text-pink-400">87%</span>
+                            </div>
+                            <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-pink-600 to-rose-600 skill-bar" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -517,218 +262,92 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl sm:text-5xl font-black mb-6 text-center">
-                Dự Án <span class="gradient-text">Cá Nhân</span>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black mb-12 sm:mb-16 text-center">
+                Featured <span class="gradient-text">Projects</span>
             </h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-                Các dự án học tập và cá nhân giúp mình rèn luyện kỹ năng lập trình và áp dụng kiến thức đã học
-            </p>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Project 1 -->
-                <div class="bg-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <div class="h-40 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-5xl">
-                        📝
+                <div class="project-card bg-slate-800/50 rounded-3xl overflow-hidden border border-slate-700">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-blue-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-5xl sm:text-6xl">🚀</div>
                     </div>
                     <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold">Todo App</h3>
-                            <span class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Hoàn thành</span>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-4">
-                            Ứng dụng quản lý công việc với các tính năng thêm, xóa, sửa task. Responsive design và lưu trữ dữ liệu local.
-                        </p>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">E-Commerce Platform</h3>
+                        <p class="text-sm sm:text-base text-gray-400 mb-4">Full-stack e-commerce solution with React, Node.js, and Stripe integration</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded">HTML</span>
-                            <span class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded">CSS</span>
-                            <span class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded">JavaScript</span>
+                            <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs sm:text-sm">React</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-xs sm:text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-xs sm:text-sm">MongoDB</span>
                         </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-1">
+                        <div class="flex gap-4 text-sm sm:text-base">
+                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                                <span>Demo</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                 </svg>
-                                Demo
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-1">
+                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-2">
+                                <span>GitHub</span>
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
-                                Code
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="bg-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <div class="h-40 bg-gradient-to-br from-pink-600 to-orange-600 flex items-center justify-center text-5xl">
-                        🌦️
+                <div class="project-card bg-slate-800/50 rounded-3xl overflow-hidden border border-slate-700">
+                    <div class="h-48 bg-gradient-to-br from-pink-600 to-orange-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-5xl sm:text-6xl">🎨</div>
                     </div>
                     <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold">Weather App</h3>
-                            <span class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Hoàn thành</span>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-4">
-                            Ứng dụng xem thời tiết sử dụng API, hiển thị thông tin thời tiết chi tiết theo thành phố với giao diện đẹp mắt.
-                        </p>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">Design System</h3>
+                        <p class="text-sm sm:text-base text-gray-400 mb-4">Comprehensive component library and design tokens for enterprise applications</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded">React</span>
-                            <span class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded">Tailwind</span>
-                            <span class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded">API</span>
+                            <span class="px-3 py-1 bg-pink-600/20 text-pink-400 rounded-full text-xs sm:text-sm">React</span>
+                            <span class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-xs sm:text-sm">Storybook</span>
+                            <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs sm:text-sm">Figma</span>
                         </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-1">
+                        <div class="flex gap-4 text-sm sm:text-base">
+                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                                <span>Demo</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                 </svg>
-                                Demo
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-1">
+                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-2">
+                                <span>GitHub</span>
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
-                                Code
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="bg-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <div class="h-40 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center text-5xl">
-                        💰
+                <div class="project-card bg-slate-800/50 rounded-3xl overflow-hidden border border-slate-700 sm:col-span-2 lg:col-span-1">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-5xl sm:text-6xl">📱</div>
                     </div>
                     <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold">Budget Tracker</h3>
-                            <span class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded">Đang làm</span>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-4">
-                            Ứng dụng quản lý chi tiêu cá nhân với biểu đồ thống kê, phân loại thu chi và báo cáo hàng tháng.
-                        </p>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">Mobile App</h3>
+                        <p class="text-sm sm:text-base text-gray-400 mb-4">Cross-platform fitness tracking app with real-time analytics</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded">React</span>
-                            <span class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Node.js</span>
-                            <span class="text-xs px-2 py-1 bg-emerald-600/20 text-emerald-400 rounded">MongoDB</span>
+                            <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-xs sm:text-sm">React Native</span>
+                            <span class="px-3 py-1 bg-teal-600/20 text-teal-400 rounded-full text-xs sm:text-sm">Firebase</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-xs sm:text-sm">Redux</span>
                         </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-1">
+                        <div class="flex gap-4 text-sm sm:text-base">
+                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                                <span>Demo</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                 </svg>
-                                Demo
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-1">
+                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-2">
+                                <span>GitHub</span>
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="bg-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <div class="h-40 bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-5xl">
-                        🎮
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold">Quiz Game</h3>
-                            <span class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Hoàn thành</span>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-4">
-                            Game trắc nghiệm với nhiều chủ đề khác nhau, có timer, điểm số và bảng xếp hạng. UI/UX thân thiện.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded">JavaScript</span>
-                            <span class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded">CSS3</span>
-                            <span class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded">HTML5</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                </svg>
-                                Demo
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="bg-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <div class="h-40 bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center text-5xl">
-                        🍕
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold">Restaurant Website</h3>
-                            <span class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Hoàn thành</span>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-4">
-                            Website nhà hàng với menu, đặt bàn online, gallery hình ảnh. Responsive và có animation mượt mà.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded">HTML5</span>
-                            <span class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded">CSS3</span>
-                            <span class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded">JavaScript</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                </svg>
-                                Demo
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="bg-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <div class="h-40 bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-5xl">
-                        📚
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold">Personal Blog</h3>
-                            <span class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Hoàn thành</span>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-4">
-                            Blog cá nhân chia sẻ kiến thức lập trình với markdown support, search, categories và dark mode.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded">React</span>
-                            <span class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Node.js</span>
-                            <span class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded">Markdown</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                </svg>
-                                Demo
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                Code
                             </a>
                         </div>
                     </div>
@@ -738,241 +357,134 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+    <section id="contact" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-950">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl sm:text-5xl font-black mb-6">
-                Liên Hệ <span class="gradient-text">Với Mình</span>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8">
+                Let's <span class="gradient-text">Connect</span>
             </h2>
-            <p class="text-base sm:text-lg text-gray-400 mb-12 px-4">
-                Mình rất mong được cơ hội làm việc và học hỏi từ quý công ty. Hãy liên hệ với mình qua các kênh dưới đây!
+            <p class="text-base sm:text-lg md:text-xl text-gray-400 mb-8 sm:mb-12 px-4">
+                Have an exciting project in mind? Let's work together to create something amazing!
             </p>
             
             <div class="grid sm:grid-cols-2 gap-6 mb-12 px-4">
-                <a href="mailto:nguyenvana@email.com" class="bg-slate-800 rounded-2xl p-6 card-hover group">
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition">📧</div>
-                    <h3 class="text-lg font-bold mb-2">Email</h3>
-                    <p class="text-sm text-purple-400">nguyenvana@email.com</p>
+                <div class="gradient-border">
+                    <div class="gradient-border-content p-6 sm:p-8">
+                        <div class="text-4xl mb-4">📧</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Email</h3>
+                        <a href="mailto:david@example.com" class="text-sm sm:text-base text-purple-400 hover:text-purple-300">david@example.com</a>
+                    </div>
+                </div>
+                <div class="gradient-border">
+                    <div class="gradient-border-content p-6 sm:p-8">
+                        <div class="text-4xl mb-4">📱</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Phone</h3>
+                        <a href="tel:+84123456789" class="text-sm sm:text-base text-purple-400 hover:text-purple-300">+84 123 456 789</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center flex-wrap gap-4 mb-8 sm:mb-12">
+                <a href="#" class="social-icon w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-800 text-white rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-purple-500/50 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 </a>
-                
-                <a href="tel:+84123456789" class="bg-slate-800 rounded-2xl p-6 card-hover group">
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition">📱</div>
-                    <h3 class="text-lg font-bold mb-2">Điện thoại</h3>
-                    <p class="text-sm text-purple-400">+84 123 456 789</p>
+                <a href="#" class="social-icon w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-blue-500/50 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
-                
-                <a href="#" class="bg-slate-800 rounded-2xl p-6 card-hover group">
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition">💼</div>
-                    <h3 class="text-lg font-bold mb-2">LinkedIn</h3>
-                    <p class="text-sm text-purple-400">linkedin.com/in/nguyenvana</p>
+                <a href="#" class="social-icon w-14 h-14 bg-gradient-to-br from-pink-600 to-rose-800 text-white rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-pink-500/50 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
-                
-                <a href="#" class="bg-slate-800 rounded-2xl p-6 card-hover group">
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition">💻</div>
-                    <h3 class="text-lg font-bold mb-2">GitHub</h3>
-                    <p class="text-sm text-purple-400">github.com/nguyenvana</p>
+                <a href="#" class="social-icon w-14 h-14 bg-gradient-to-br from-sky-600 to-blue-800 text-white rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-sky-500/50 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
                 </a>
             </div>
 
-            <div class="bg-slate-800 rounded-2xl p-8 mb-8">
-                <h3 class="text-xl font-bold mb-4">📄 Download CV</h3>
-                <p class="text-gray-400 mb-6">Tải CV của mình để xem chi tiết kinh nghiệm và kỹ năng</p>
-                <button class="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition inline-flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                    Tải CV (PDF)
-                </button>
-            </div>
-
-            <div class="flex justify-center gap-4">
-                <a href="#" class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center hover:scale-110 transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-                <a href="#" class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center hover:scale-110 transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
-                <a href="#" class="w-12 h-12 bg-gradient-to-br from-pink-600 to-rose-800 rounded-full flex items-center justify-center hover:scale-110 transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                    </svg>
-                </a>
-                <a href="#" class="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-800 rounded-full flex items-center justify-center hover:scale-110 transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
-                    </svg>
-                </a>
-            </div>
+            <a href="mailto:david@example.com" class="inline-block px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition transform text-sm sm:text-base">
+                Send me an email
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <footer class="relative overflow-hidden bg-slate-950 border-t border-slate-800">
+        <!-- Animated Wave Background -->
+        <div class="absolute bottom-0 left-0 right-0 opacity-10">
+            <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path fill="url(#gradient)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,128C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
                 <div>
-                    <h3 class="text-xl font-bold gradient-text mb-4">Nguyễn Văn A</h3>
-                    <p class="text-sm text-gray-400 mb-4">
-                        Sinh viên IT đam mê lập trình, luôn sẵn sàng học hỏi và phát triển.
-                    </p>
+                    <h3 class="text-xl sm:text-2xl font-bold gradient-text mb-4">DEV.PORTFOLIO</h3>
+                    <p class="text-sm sm:text-base text-gray-400 mb-4">Creating digital experiences that inspire and engage.</p>
                     <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-purple-600 rounded-lg flex items-center justify-center transition">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-purple-600 rounded-full flex items-center justify-center transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-sky-600 rounded-full flex items-center justify-center transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="font-bold mb-4">Liên kết nhanh</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#home" class="hover:text-purple-400 transition">Trang chủ</a></li>
-                        <li><a href="#about" class="hover:text-purple-400 transition">Giới thiệu</a></li>
-                        <li><a href="#education" class="hover:text-purple-400 transition">Học vấn</a></li>
-                        <li><a href="#projects" class="hover:text-purple-400 transition">Dự án</a></li>
+                    <h4 class="text-base sm:text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm sm:text-base text-gray-400">
+                        <li><a href="#home" class="hover:text-purple-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-purple-400 transition">About</a></li>
+                        <li><a href="#skills" class="hover:text-purple-400 transition">Skills</a></li>
+                        <li><a href="#projects" class="hover:text-purple-400 transition">Projects</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold mb-4">Kỹ năng chính</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li class="flex items-center gap-2">
-                            <span class="text-purple-400">•</span>
-                            <span>HTML, CSS, JavaScript</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-purple-400">•</span>
-                            <span>React.js</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-purple-400">•</span>
-                            <span>Node.js & Express</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-purple-400">•</span>
-                            <span>Git & GitHub</span>
-                        </li>
+                    <h4 class="text-base sm:text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm sm:text-base text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition">Web Development</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">UI/UX Design</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Mobile Apps</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Consulting</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold mb-4">Liên hệ</h4>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li class="flex items-start gap-2">
-                            <span class="text-purple-400 mt-1">📧</span>
-                            <span>nguyenvana@email.com</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-purple-400 mt-1">📱</span>
-                            <span>+84 123 456 789</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-purple-400 mt-1">📍</span>
-                            <span>TP. Hồ Chí Minh, Việt Nam</span>
-                        </li>
-                    </ul>
+                    <h4 class="text-base sm:text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-sm sm:text-base text-gray-400 mb-4">Subscribe to get updates on new projects</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-purple-500 text-sm">
+                        <button class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition text-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div class="border-t border-slate-800 pt-8">
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-                    <p>&copy; 2024 Nguyễn Văn A. Được tạo với ❤️ và nhiều cốc cà phê ☕</p>
-                    <div class="flex gap-4">
-                        <span class="flex items-center gap-1">
-                            <span>⭐</span>
-                            <span>GPA: 3.5/4.0</span>
-                        </span>
-                        <span class="flex items-center gap-1">
-                            <span>🚀</span>
-                            <span>Sẵn sàng làm việc</span>
-                        </span>
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm sm:text-base text-gray-400">
+                    <p>&copy; 2024 David Nguyen. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-purple-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-purple-400 transition">Terms of Service</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-            });
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Active nav link on scroll
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const scrollY = window.pageYOffset;
-
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('text-purple-400');
-                    });
-                    if (navLink) {
-                        navLink.classList.add('text-purple-400');
-                    }
-                }
-            });
-        });
-
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card-hover, .timeline-item, .certificate-card').forEach(el => {
-            observer.observe(el);
-        });
+    <script src="script.js">
+      
     </script>
 </body>
 </html>
